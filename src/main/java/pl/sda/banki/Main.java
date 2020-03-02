@@ -5,6 +5,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
@@ -26,7 +27,9 @@ public class Main {
         Composition composition3 = new Composition(user3, bankAccount3);
         Composition composition4 = new Composition(user4, bankAccount4);
 
+        List<Composition> fullList = Arrays.asList( composition1, composition2, composition3, composition4);
         List<Composition> list = new ArrayList<>();
+        list.addAll(fullList);
 
         try {
             ObjectMapper objectMapper = new ObjectMapper();
